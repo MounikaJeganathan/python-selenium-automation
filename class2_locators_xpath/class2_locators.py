@@ -18,7 +18,7 @@ driver.get("https://www.amazon.com/")
 driver.find_element(By.ID, 'twotabsearchtextbox')
 driver.find_element(By.ID, 'nav-search-submit-button')
 
-# By Xpath
+# By Xpath (use $x in console)
 driver.find_element(By.XPATH, "//input[@id = 'twotabsearchtextbox']")
 driver.find_element(By.XPATH, "//input[@placeholder = 'Search Amazon']")
 driver.find_element(By.XPATH, "//*[@placeholder = 'Search Amazon']")
