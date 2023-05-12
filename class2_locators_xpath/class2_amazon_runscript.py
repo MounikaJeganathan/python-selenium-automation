@@ -25,4 +25,5 @@ assert expected_result == actual_result, f'Error !! Actual result {actual_result
 
 print("Test case is passed")
 
+
 driver.quit()

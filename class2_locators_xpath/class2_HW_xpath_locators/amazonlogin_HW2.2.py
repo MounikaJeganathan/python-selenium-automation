@@ -9,17 +9,17 @@ service = Service(driver_path)
 driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
-#Test Case: Logged out user sees Sign in page when clicking Orders
+# Test Case: Logged out user sees Sign in page when clicking Orders
 
 driver.get("https://www.amazon.com/")
 
-#clicking orders
+# clicking orders
 driver.find_element(By.XPATH, "//a[@id ='nav-orders']//span[@class ='nav-line-2']").click()
 
-#opens sign in page and verify sign in header is visible
+# opens sign in page and verify sign in header is visible
 
-assert driver.find_element(By.XPATH, "//h1[@class = 'a-spacing-small' and contains(text(),'Sign in')]").is_displayed(),\
-            f'Error!!, Sign In header is not displayed '
+assert driver.find_element(By.XPATH, "//h1[@class = 'a-spacing-small' and contains(text(),'Sign in')]").is_displayed(), \
+    f'Error!!, Sign In header is not displayed '
 
 print("Sign in Page loaded sucessfully ")
 
