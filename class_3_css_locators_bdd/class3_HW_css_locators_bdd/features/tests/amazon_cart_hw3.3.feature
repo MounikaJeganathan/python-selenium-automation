@@ -2,6 +2,6 @@
 Feature: Open Amazon Cart
 
   Scenario: User navigate to Amazon Cart
-    Given Open amazon link
+    Given Open Amazon main page
     When Click on Cart icon
     Then Verify amazon cart is empty
