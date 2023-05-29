@@ -3,7 +3,7 @@ from behave import given, when, then
 from time import sleep
 
 BESTSELLER_ICON = (By.XPATH, "//a[contains(text(),'Best Sellers')]")
-BESTSELLER_LINKS = (By.CSS_SELECTOR, "div._p13n-zg-nav-tab-all_style_zg-tabs__EYPLq a")
+BESTSELLER_LINKS = (By.CSS_SELECTOR, "#zg_header a")
 
 
 @when('Click on Best Seller')
