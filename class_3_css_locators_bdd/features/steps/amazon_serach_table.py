@@ -2,9 +2,9 @@ from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
 
-
 SEARCH_BTN = (By.ID, 'twotabsearchtextbox')
-SEARCH_SUBMIT= (By.ID, 'nav-search-submit-button')
+SEARCH_SUBMIT = (By.ID, 'nav-search-submit-button')
+
 
 @given('Open Amazon main page')
 def open_amazon(context):
