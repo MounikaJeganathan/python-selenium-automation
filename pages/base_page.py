@@ -1,5 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from support.logger import logger
 
 
 class Page:
@@ -16,6 +17,7 @@ class Page:
         return self.driver.find_elements(*locator)
 
     def click(self, *locator):
+        logger.info('Clicking on {}, {}'.format(*locator))
         self.driver.find_element(*locator).click()
 
     def input_text(self, text, *locator):
@@ -23,9 +25,15 @@ class Page:
         e.clear()
         e.send_keys(text)
         print(f'Inputting text: {text}')
+        logger.info(f'Inputting text: {text}')
 
     def open_url(self, url):
         self.driver.get(url)
+        logger.info(f'Opening URL: {url}')
+
+    # def open_url(self, url='`'):
+    #     print(f'Opening URL: {url}')
+    #     self.driver.get(url)`
 
     def wait_for_element_click(self, *locator):
         e = self.wait.until(EC.element_to_be_clickable(locator), message=f'Element not clickable by {locator}')
@@ -53,7 +61,3 @@ class Page:
     def verify_is_displayed(self, *locator):
         assert self.driver.find_element(*locator).is_displayed(), \
             f'Error!!, {locator} is not displayed '
-
-    # def open_url(self, url='`'):
-    #     print(f'Opening URL: {url}')
-    #     self.driver.get(url)`
