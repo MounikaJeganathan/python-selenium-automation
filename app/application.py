@@ -6,6 +6,7 @@ from pages.search_result import SearchResult
 from pages.signin_page import SignIn
 
 
+
 class Application:
 
     def __init__(self, driver):

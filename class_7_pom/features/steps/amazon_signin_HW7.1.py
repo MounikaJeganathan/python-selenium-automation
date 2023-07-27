@@ -25,5 +25,5 @@ def verify_signin_opened(context):
     #
     # print("Email field is displayed")
 
-     context.app.signin_page.sigin_header()
-     context.app.signin_page.email_field()
+    context.app.signin_page.sigin_header()
+    context.app.signin_page.email_field()
